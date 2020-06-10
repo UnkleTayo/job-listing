@@ -11,16 +11,16 @@ async function getData() {
 
 const displayData = (data) => {
   itemContainer.innerHTML = '';
-  function test(item, msg) {
-    if (item == 'true') {
-      console.log(item);
-      return msg;
-    }
-  }
 
   data.forEach((data) => {
     const itemEl = document.createElement('div');
     itemEl.classList.add('container__cards--item');
+    function test(item, msg) {
+      if (item == 'true') {
+        console.log(msg);
+        return msg;
+      }
+    }
 
     itemEl.innerHTML = `
     <div class="item-child" id="${data.id}">
@@ -51,6 +51,6 @@ const displayData = (data) => {
     <p>${[...data.languages].map((data) => data)}</p>
   </div>`;
 
-    // itemContainer.appendChild(itemEl);
+    itemContainer.appendChild(itemEl);
   });
 };
