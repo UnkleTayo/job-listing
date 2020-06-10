@@ -52,9 +52,7 @@ body {
 .container__cards {
   position: relative;
   margin-bottom: 0.9rem;
-  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
-  border-radius: 12px;
-  background-color: white;
+
   backface-visibility: none;
   margin: 2rem 5%;
 }
@@ -65,8 +63,11 @@ body {
   justify-content: space-between;
   align-items: center;
   vertical-align: middle;
-  margin: 0 2rem;
+  margin: 1.5rem 2rem;
   padding: 1rem;
+  background-color: white;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
 }
 
 .item-child {
@@ -156,6 +157,7 @@ img {
     position: relative;
     flex-direction: column;
     align-items: center;
+    margin-top: 2rem;
   }
 
   .container__cards--item .item-child {
@@ -173,11 +175,11 @@ img {
 @media screen and (max-width: 650px) {
   .img-container {
     position: absolute;
-    left: 0.85rem;
+    left: 2.5rem;
     top: 0.5rem;
     transform: translate(-50%, -50%);
-    height: 80px;
-    width: 80px;
+    height: 60px;
+    width: 60px;
     border-radius: 50%;
     margin-right: 1rem;
     outline: none;

@@ -23,34 +23,44 @@ const displayData = (data) => {
     }
 
     itemEl.innerHTML = `
+
     <div class="item-child" id="${data.id}">
-    <div class="img-container">
-      <img src="${data.logo}" alt="${data.company}" class="image">
-    </div>
-    <div>
-      <div class='skills'>
-        <span>${data.company}</span>
-        <span class='${test(data.new, 'New')}'></span>
-        <span class="features">Features</span>
+    <div class="left">
+      <div class="img-container">
+        <img src="${data.logo}" alt="${data.company}" class="image">
       </div>
-      <h4>${data.position}</h4>
-      <div class='timeline'>
-        <p class="posted">
+      <div>
+        <div class='skills'>
+          <span>${data.company}</span>
+          <span class='new'>${test(data.new, 'New')}</span>
+          <span class="features">Features</span>
+        </div>
+        <h4>${data.position}</</h4>
+        <div class='timeline'>
+          <p class="posted">
           ${data.postedAt}
-        </p>
-        <p>${data.contract}</p>
-        <p>${data.location}</p>
+          </p>
+          <p>${data.contract}</p>
+          <p>${data.location}</p>
+        </div>
+
       </div>
     </div>
-    <div></div>
   </div>
 
-  <div class='slack'>
+
+  <div class='slack right'>
     <p>${data.role}</p>
     <p>${data.level}</p>
-    <p>${[...data.languages].map((data) => data)}</p>
-  </div>`;
-
+    
+    <p>${data.languages.map((data) => data.split(' '))}</p>
+ 
+  </div>
+    `;
     itemContainer.appendChild(itemEl);
   });
 };
+
+{
+  /* <p>${[...data.languages].map((data) => data)}</p> */
+}
